@@ -8,20 +8,11 @@ from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
 # Local imports
 
 # Instantiate app, set attributes
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../instance/events.db'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# Set secret key for sessions
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../instance/events.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
 
