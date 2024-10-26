@@ -18,11 +18,11 @@ with app.app_context():
     # Create categories first
     try:
         categories = [
-            Category(name="Competition"),
-            Category(name="Sales"),
-            Category(name="Show"),
-            Category(name="Experience"),
-            Category(name="Gaming"),
+            Category(name="participant"),
+            Category(name="Child"),
+            Category(name="Adult"),
+            # Category(name="Experience"),
+            # Category(name="Gaming"),
         ]
         
         # Add categories to the session and commit
